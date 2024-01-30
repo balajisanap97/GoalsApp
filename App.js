@@ -12,7 +12,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
-        <TextInput style={styles.textInput} onChangeText={goalInputHandler} placeholder="Your course goal"/>
+        <TextInput style={styles.textInput} onChangeText={goalInputHandler} placeholder="Enter Your course goal"/>
         <Button title="Add Goal" onPress={addGoalHandler}/>
       </View>
       <View style={styles.goalsContainer}>
