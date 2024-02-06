@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button, FlatList, StyleSheet, View } from 'react-native';
 import GoalItem from './components/GoalItem';
 import GoalInput from './components/GoalInput';
+import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
   const [courseGoals,setCourseGoals]=useState([])
@@ -24,8 +25,10 @@ export default function App() {
     console.log('DELETE');
   }
   return (
+    <>
+    <StatusBar style='light'/>
     <View style={styles.container}>
-      <Button title='Add new goal' color='#5e0acc' onPress={startAddGoalHandler}/>
+      <Button title='Add new goal' color='#B180f0' onPress={startAddGoalHandler}/>
          {/*Input  */}
        <GoalInput visible={modalIsVisible} onAddGoal={addGoalHandler} onCancel={endAddGoalHandler}/>
       {/* output */}
@@ -40,14 +43,15 @@ export default function App() {
         />
       </View>
     </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    // paddingTop:50,
+    backgroundColor: '#1e085a',
+    paddingTop:50,
     paddingHorizontal:15,
   },
   goalsContainer:{
